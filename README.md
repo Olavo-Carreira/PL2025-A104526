@@ -2,11 +2,12 @@
 
 LEI - Processamento de Linguagens 24/25
 Identificação
+
 | Nome                             | Número  |
 |----------------------------------|---------|
-| Olavo Rafael Fernandes Malainho Santos Carreira | A104270 |
+| Olavo Rafael Fernandes Malainho Santos Carreira | A104526 |
 
-![alt text](fotoCara.png)
+![alt text](fotoCara.png){ width=200px }
 
 
 Informação
