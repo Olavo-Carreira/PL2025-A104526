@@ -1,11 +1,11 @@
-# Somador On/Off - Processador de Números com Controle de Ativação
+# Somador On/Off - Processador de Números com Opções de Ativação
 
 **Data:** 9 de Fevereiro de 2024  
 
 ## Autor
 - **Nome:** Olavo Rafael Fernandes Malainho Santos Carreira
 - **Número:** 104526  
-- ![Foto do Autor](../fotoCara.png)
+ ![Foto do Autor](../fotoCara.png)
 
 ## Resumo
 
