@@ -7,7 +7,7 @@ Identificação
 |----------------------------------|---------|
 | Olavo Rafael Fernandes Malainho Santos Carreira | A104526 |
 
-![alt text](fotoCara.png){ width=200px }
+![alt text](fotoCara.png)
 
 
 Informação
