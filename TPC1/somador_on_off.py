@@ -25,7 +25,8 @@ def somador_on_off():
                             somar_ativo = False
                             i += 3
                         elif linha[i] == '=':  
-                            print(f"Linha {num_linha}: {soma}\n{'-' * 30}")
+                            print(f"Soma agora: {soma}\n{'-' * 30}")
+
                             i += 1
                         else:
                             i += 1  

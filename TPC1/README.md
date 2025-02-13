@@ -54,19 +54,19 @@ O código principal está contido na função `somador_on_off()` que:
 O programa espera um ficheiro `input.txt` com conteúdo no seguinte formato:
 
 ```plaintext
-5on7off3on2=off4on6
+5on7off3on2=off4on6=
 1off2on3=4
-1o2on3off4on5
+1o2on3off4on55
 ```
 
 A saída será apresentada no formato:
 
 ```plaintext
-Linha 1: 20
+Soma agora: 14
 ------------------------------
-Linha 2: 7
+Soma agora: 20
 ------------------------------
-Linha 3: 8
+Soma agora: 24
 ------------------------------
 ```
 
