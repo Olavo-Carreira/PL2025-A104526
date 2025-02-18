@@ -32,54 +32,10 @@ O processador opera segundo as seguintes regras:
 
 ### Exemplo de Funcionamento:
 
-                             ANÁLISE DE OBRAS
+![](1.png)
+![](2.png)
+![](3.png)
 
-                             1. COMPOSITORES
---------------------------------------------------------------------------------
-  1. Alessandro Stradella
-  2. Antonio Maria Abbatini
-  3. Bach, Johann Christoph
-  4. Bach, Johann Michael
-  5. Bach, Wilhelm Friedemann
-  ...
-
-                        2. DISTRIBUIÇÃO POR PERÍODO
---------------------------------------------------------------------------------
-Período                                  Quantidade           Percentagem
-
-Barroco                                         26                 14.94%
-Clássico                                        15                  8.62%
-Contemporâneo                                    7                  4.02%
-Medival                                         18                 10.34%
-
-...
-Total                                          150
-
-                          3. OBRAS POR PERÍODO
-
-
-BARROCO
-
-Título                                                    ID                  
-
-Ab Irato                                                  O41                
-Die Ideale, S.106                                         O58                
-Fantasy No. 2                                             O170               
-Hungarian Rhapsody No. 16                                 O146               
-Hungarian Rhapsody No. 5                                  O44      
-...       
-
-CLÁSSICO
-
-Título                                                    ID                  
-
-Bamboula, Op. 2                                           O130               
-Capriccio Italien                                         O123               
-Czech Suite                                               O153               
-French Overture                                           O160               
-Hungarian Rhapsody No. 14                                 O168               
-Hungarian Rhapsody No. 18                                 O47  
-...
 
 ## Ficheiros do projeto
 
