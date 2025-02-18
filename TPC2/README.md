@@ -31,9 +31,8 @@ O processador opera segundo as seguintes regras:
 4. Formata e apresenta os resultados em tabelas legíveis
 
 ### Exemplo de Funcionamento:
-================================================================================
+
                              ANÁLISE DE OBRAS
-================================================================================
 
                              1. COMPOSITORES
 --------------------------------------------------------------------------------
@@ -47,22 +46,22 @@ O processador opera segundo as seguintes regras:
                         2. DISTRIBUIÇÃO POR PERÍODO
 --------------------------------------------------------------------------------
 Período                                  Quantidade           Percentagem
---------------------------------------------------------------------------------
+
 Barroco                                         26                 14.94%
 Clássico                                        15                  8.62%
 Contemporâneo                                    7                  4.02%
 Medival                                         18                 10.34%
---------------------------------------------------------------------------------
+
 ...
 Total                                          150
 
                           3. OBRAS POR PERÍODO
-================================================================================
+
 
 BARROCO
---------------------------------------------------------------------------------
+
 Título                                                    ID                  
---------------------------------------------------------------------------------
+
 Ab Irato                                                  O41                
 Die Ideale, S.106                                         O58                
 Fantasy No. 2                                             O170               
@@ -71,9 +70,9 @@ Hungarian Rhapsody No. 5                                  O44
 ...       
 
 CLÁSSICO
---------------------------------------------------------------------------------
+
 Título                                                    ID                  
---------------------------------------------------------------------------------
+
 Bamboula, Op. 2                                           O130               
 Capriccio Italien                                         O123               
 Czech Suite                                               O153               
@@ -81,6 +80,8 @@ French Overture                                           O160
 Hungarian Rhapsody No. 14                                 O168               
 Hungarian Rhapsody No. 18                                 O47  
 ...
+
+## Ficheiros do projeto
 
 - [`csvMusicas.py`](csvMusicas.py) - Código fonte do programa.
 - [`obras.csv`](obras.csv) - Ficheiro de entrada csv contendo informações acerca de obras.
