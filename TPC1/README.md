@@ -1,6 +1,6 @@
 # Somador On/Off - Processador de Números com Opções de Ativação
 
-**Data:** 9 de Fevereiro de 2024  
+**Data:** 9 de Fevereiro de 2025  
 
 ## Autor
 - **Nome:** Olavo Rafael Fernandes Malainho Santos Carreira
