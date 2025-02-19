@@ -32,9 +32,9 @@ O processador opera segundo as seguintes regras:
 
 ### Exemplo de Funcionamento:
 
-![](1.png)
-![](2.png)
 ![](3.png)
+![](2.png)
+![](1.png)
 
 
 ## Ficheiros do projeto
