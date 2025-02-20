@@ -1,37 +1,40 @@
+import re
+
 def ler_ficheiro(lines):
-    content = "".join(lines).strip()
-    register = []
-    current_field = ""
-    inside_field = False
+
+    content = "".join(lines)
     data = []
-
-    for char in content:
-        if char == ';':
-            if inside_field:
-                current_field += char
-            else:
-                register.append(current_field.strip())
-                current_field = ""
-        elif char in ('\n', '\r'):
-            if inside_field:
-                current_field += ' '
-            else:
-                if current_field:
-                    register.append(current_field.strip())
-                    current_field = ""
-                if register:
-                    data.append(register)
-                    register = []
-        elif char == '"':
-            inside_field = not inside_field
-        else:
-            current_field += char
-
-    if current_field:
-        register.append(current_field.strip())
-    if register:
-        data.append(register)
-
+    
+    line_pattern = re.compile(r'(?:[^\n\r]+)(?:\r?\n)?')
+    line_matches = re.finditer(line_pattern, content)
+    
+    accumulated_line = ""
+    in_quotes = False
+    
+    for line_match in line_matches:
+        line = line_match.group(0)
+        
+        quotes_count = line.count('"')
+        if quotes_count % 2 == 1:  
+            in_quotes = not in_quotes
+        
+        accumulated_line += line
+        
+        if not in_quotes: 
+            if accumulated_line.strip():
+                row = []
+                field_pattern = re.compile(r'(?:^|;)\s*(?:"((?:[^"]|"")*)"|([^;"]*))')
+                for field_match in re.finditer(field_pattern, accumulated_line + ';'):
+                    field_value = field_match.group(1) if field_match.group(1) is not None else field_match.group(2)
+                    if field_value is not None:
+                        field_value = re.sub(r'""', '"', field_value).strip()
+                        row.append(field_value)
+                
+                if row:
+                    data.append(row)
+            
+            accumulated_line = ""
+    
     return data
 
 
