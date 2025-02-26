@@ -3,8 +3,8 @@
 **Data:** 26 de Fevereiro de 2025  
 
 ## Autor
-- **Nome:** [Seu Nome]
-- **Número:** [Seu Número]  
+- **Nome:** Olavo Rafael Fernandes Malainho Santos Carreira
+- **Número:** 104526  
  ![Foto do Autor](../fotoCara.png)
 
 ## Resumo
