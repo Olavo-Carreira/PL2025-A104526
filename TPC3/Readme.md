@@ -16,8 +16,8 @@ Este projeto implementa um conversor de Markdown para HTML que processa texto no
 - Conversão de texto em negrito (**texto**) para tags HTML (`<b>texto</b>`).
 - Conversão de texto em itálico (*texto*) para tags HTML (`<i>texto</i>`).
 - Processamento de listas numeradas para HTML (`<ol>` e `<li>`).
-- Conversão de links no formato [texto](URL) para tags `<a href="URL">texto</a>`.
-- Processamento de imagens no formato "![texto alternativo](URL)" para tags `<img>`.
+- Conversão de links no formato `[texto](URL)` para tags `<a href="URL">texto</a>`.
+- Processamento de imagens no formato `![texto alternativo](URL)` para tags `<img>`.
 
 ## Comportamento do Conversor
 
