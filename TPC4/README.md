@@ -3,8 +3,8 @@
 **Data:** 5 de Março de 2025  
 
 ## Autor
-- **Nome:** [Seu Nome]
-- **Número:** [Seu Número]  
+- **Nome:** Olavo Rafael Fernandes Malainho Santos Carreira
+- **Número:** 104526  
  ![Foto do Autor](../fotoCara.png)
 
 ## Resumo
@@ -69,7 +69,7 @@ O código principal está organizado em funções específicas para cada tipo de
 
 - [`lex.py`](lex.py) - Código fonte do analisador léxico.
 - [`README.md`](README.md) - Documentação deste projeto.
-- [`query.txt](query.txt) - Ficheiro de query para testar o analisador.
+- [`query.txt`](query.txt) - Ficheiro de query para testar o analisador.
 
 ## Exemplo de Uso
 
@@ -110,8 +110,5 @@ O analisador utiliza expressões regulares através do PLY para identificar padr
 
 ## Possíveis Melhorias Futuras
 
-- Suporte a mais elementos da linguagem de consulta, como operadores, funções e expressões.
-- Adição de uma interface gráfica para visualizar os tokens reconhecidos.
-- Expansão para um analisador sintático completo (parser) que construa uma árvore de sintaxe.
+- Suporte a mais elementos da linguagem de consulta, como operadores, funções e expressões..
 - Melhorar o tratamento de erros para entradas mal formatadas.
-- Implementação de recursos para coloração de sintaxe em editores de texto.
