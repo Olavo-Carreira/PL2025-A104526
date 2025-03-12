@@ -1,0 +1,50 @@
+[
+  {
+    "cod": "F10",
+    "nome": "Chocolate",
+    "quant": 4,
+    "preco": 1.5
+  },
+  {
+    "cod": "A23",
+    "nome": "Agua 0.5L",
+    "quant": 8,
+    "preco": 0.7
+  },
+  {
+    "cod": "B17",
+    "nome": "Coca-Cola",
+    "quant": 10,
+    "preco": 1.2
+  },
+  {
+    "cod": "C05",
+    "nome": "Snickers",
+    "quant": 5,
+    "preco": 0.9
+  },
+  {
+    "cod": "D12",
+    "nome": "Batatas Fritas",
+    "quant": 6,
+    "preco": 1.1
+  },
+  {
+    "cod": "E08",
+    "nome": "Sumo laranja",
+    "quant": 4,
+    "preco": 1.0
+  },
+  {
+    "cod": "F30",
+    "nome": "Chiclete",
+    "quant": 15,
+    "preco": 0.5
+  },
+  {
+    "cod": "G22",
+    "nome": "Cafe",
+    "quant": 12,
+    "preco": 0.8
+  }
+]
