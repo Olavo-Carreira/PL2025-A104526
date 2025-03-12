@@ -43,6 +43,9 @@ MOEDA 1e, 50c
 ```
 Adiciona um 1 euro e 50 centimos ao sado atual
 
+```bash
+SELECIONAR A23
+```
 Seleciona o produto com código A23 para compra, verificando disponibilidade e saldo.
 
 ## Estrutura do Código
@@ -74,3 +77,41 @@ Para iniciar a máquina de venda, execute o script:
 
 ```bash
 python3 vending.py
+```
+
+Exemplos de sequência de comandos:
+
+```bash
+>> LISTAR
+maq:
+cod   | nome                 | quantidade    | preço
+--------------------------------------------------
+A1    | Água                 | 10            | 0.5
+B2    | Chocolate            | 5             | 1.2
+C3    | Batatas Fritas       | 8             | 0.8
+
+>> MOEDA 2e
+maq: Saldo = 2e
+
+>> SELECIONAR B2
+maq: Pode retirar o produto dispensado "Chocolate"
+maq: Saldo = 80c
+
+>> SAIR
+maq: Pode retirar o troco: 1x 50c, 1x 20c, 2x 5c.
+maq: Até à próxima
+```
+
+## Uso de Expressões Regulares
+
+O programa utiliza extensivamente expressões regulares para validar entradas e extrair informações:
+
+- Validação de códigos de produto: `r'^[A-Z]\d+$'`
+- Processamento de moedas: `r'(\d+)\s*([ec])'`
+- Processamento de comandos: `r'^SELECIONAR\s+([A-Z]\d+)\s*$'`
+- Validação do formato JSON: `r'\[\s*\{\s*"cod"\s*:'`
+
+## Possíveis Melhorias Futuras
+
+- Categorização de produtos
+- Alertas de stock baixo
