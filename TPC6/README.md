@@ -1,4 +1,4 @@
-# Calculadora de Expressões Matemáticas
+# Calculadora de Expressões Matemáticas com Parser LL(1)
 
 **Data:** 20 de Março de 2025
 
@@ -9,11 +9,12 @@
 
 ## Resumo
 
-Este projeto implementa uma calculadora de expressões matemáticas em Python que permite avaliar operações aritméticas simples, respeitando a precedência dos operadores. O programa utiliza expressões regulares para analisar e processar as expressões matemáticas fornecidas pelo utilizador.
+Este projeto implementa uma calculadora de expressões matemáticas em Python que permite avaliar operações aritméticas simples, respeitando a precedência dos operadores. A implementação utiliza um analisador sintático do tipo LL(1) para processar e avaliar as expressões matemáticas fornecidas pelo utilizador.
 
 ### Funcionalidades:
 - Cálculo de expressões matemáticas básicas (adição, subtração, multiplicação, divisão)
 - Respeito pela precedência de operadores (multiplicação/divisão antes de adição/subtração)
+- Análise léxica e sintática utilizando princípios de gramáticas LL(1)
 - Interface de linha de comando interativa
 - Tratamento de erros e validação de expressões
 
@@ -21,16 +22,17 @@ Este projeto implementa uma calculadora de expressões matemáticas em Python qu
 
 A calculadora opera segundo as seguintes regras:
 1. Recebe expressões matemáticas via linha de comando.
-2. Processa primeiro todas as multiplicações e divisões.
-3. Em seguida, calcula as adições e subtrações da esquerda para a direita.
-4. Retorna números inteiros quando o resultado é um número inteiro.
-5. Lida com números negativos e decimais.
+2. Realiza análise léxica para identificar números e operadores.
+3. Executa análise sintática seguindo uma gramática LL(1).
+4. Constrói uma árvore de sintaxe para a expressão.
+5. Processa primeiro todas as multiplicações e divisões.
+6. Em seguida, calcula as adições e subtrações da esquerda para a direita.
+7. Retorna números inteiros quando o resultado é um número inteiro.
 
 ## Ficheiros do Projeto
 
-- [`calculator.py`](calculator.py) - Código fonte da calculadora.
+- [`calculadora-ll1.py`](calculadora-ll1.py) - Código fonte da calculadora com parser LL(1).
 - [`README.md`](README.md) - Documentação deste projeto.
-
 
 ### Exemplos de Expressões:
 
@@ -54,32 +56,39 @@ Primeiro calcula 2 * 2 = 4, depois 2 + 4 = 6
 
 ## Estrutura do Código
 
-O código está organizado em duas funções principais:
+O código está organizado em três componentes principais:
 
-1. `calcular_expressao(expressao)`: Analisa e calcula o valor de uma expressão matemática.
-   - Remove espaços em branco.
-   - Resolve operações de multiplicação e divisão.
-   - Resolve operações de adição e subtração.
-   - Lida com casos especiais como números negativos no início da expressão.
+1. **AnalisadorLexico**: Responsável por tokenizar a entrada
+   - Transforma a string de entrada em uma sequência de tokens (números e operadores)
+   - Ignora espaços em branco
 
-2. Função `main` (no bloco `if __name__ == '__main__'`):
-   - Executa o programa em modo interativo.
-   - Recebe expressões do utilizador através da linha de comando.
-   - Termina a execução quando o utilizador digita "sair".
+2. **AnalisadorSintatico**: Implementa a análise sintática LL(1)
+   - Constrói uma árvore de análise seguindo as regras da gramática
+   - Utiliza apenas um token de lookahead (característica LL(1))
+   - Regras gramaticais:
+     - expressao → NUM resto_expressao
+     - resto_expressao → OP NUM resto_expressao | ε
 
-## Uso de Expressões Regulares
+3. **Funções de Avaliação**: Calculam o resultado da expressão
+   - `processar_mult_div`: Processa operações de multiplicação e divisão
+   - `processar_soma_sub`: Processa operações de adição e subtração
+   - `avaliar`: Coordena a avaliação respeitando a precedência
 
-O programa utiliza expressões regulares para analisar e processar as expressões matemáticas:
+## A Abordagem LL(1)
 
-- Identificação de operações de multiplicação e divisão: `r'(\d+\.?\d*)\s*([*/])\s*(\d+\.?\d*)'`
-- Extração de números e operadores de adição e subtração: `r'(-?\d+\.?\d*)|([+\-])'`
+O analisador sintático implementado segue os princípios de um parser LL(1):
+- Análise da entrada da esquerda para a direita (primeiro L)
+- Derivação mais à esquerda (segundo L)
+- Utilização de apenas um token de lookahead (o 1)
+
+Esta abordagem permite analisar expressões aritméticas de forma eficiente, construindo uma árvore sintática que pode ser avaliada posteriormente.
 
 ## Exemplo de Uso
 
 Para iniciar a calculadora, execute o script:
 
 ```bash
-python calculadora.py
+python calculadora-ll1.py
 ```
 
 Exemplos de interação:
@@ -100,9 +109,16 @@ Digite uma expressão para calcular ou 'sair' para encerrar.
 Encerrado!
 ```
 
+## Limitações Atuais
+
+- Não suporta parênteses para controlar a precedência
+- Não implementa operações unárias (como negação)
+- Limitado a números inteiros na entrada (sem decimais)
 
 ## Possíveis Melhorias Futuras
 
-- Adição de suporte a parênteses para controlar a precedência.
-- Implementação de funções matemáticas avançadas.
+- Adição de suporte a parênteses para controlar a precedência
+- Implementação de funções matemáticas avançadas
+- Suporte a operadores unários (como negação)
 - Adição de operadores como potenciação, módulo, etc.
+- Expansão da gramática para suportar expressões mais complexas
