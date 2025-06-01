@@ -1,0 +1,7 @@
+Erro: Erro: Função 'length' não declarada
+Erro: Erro: O valor inicial do for deve ser inteiro, mas foi 'None'.
+Erro: Erro: O array 'bin' não foi declarado.
+Erro: Erro: A condição do if deve ser booleana, mas foi 'None'.
+Erro: Erro: A variável 'BinToInt' não foi declarada.
+Erro: Erro: Variável 'valor' redeclarada no mesmo escopo
+Erro: Erro: Função 'BinToInt' não declarada

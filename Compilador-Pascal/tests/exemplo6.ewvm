@@ -1,0 +1,4 @@
+Erro: Erro: Função 'length' não declarada
+Erro: Erro: O valor inicial do for deve ser inteiro, mas foi 'None'.
+Erro: Erro: 'bin' não é um array.
+Erro: Erro: A condição do if deve ser booleana, mas foi 'None'.
